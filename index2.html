@@ -47,6 +47,25 @@
                     z-index: 1000;
                     color: purple;
                 }
+
+                .notLongForThisWorld{
+                	background: yellow;
+                	width: 200px;
+                	height: 500px;
+                }
+                #someElement{
+                	background: blue;
+                	width: 200px;
+                	height: 500px;
+                	color:white;
+                }
+                .fillMeIn{
+                	background: orange;
+                	width: 200px;
+                	height: 100px;
+                	color:white;
+                	margin: 5px;
+                }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -58,7 +77,17 @@
                 }
             });
 
+            $("div.notLongForThisWorld").fadeOut();
+            $("#someElement").html("I have added some text to an element");
+
+            var elements = $("div.fillMeIn");
+			for(i=0;i<elements.length;i++)elements[i].innerHTML ="I have added some text to a group of nodes"; 
+
+			
+
         });
+
+
     </script>
 </head>
 <body>
@@ -71,7 +100,14 @@
 
         </select>
     </form>
-    
+    <div class="notLongForThisWorld"></div>
+    <div id="someElement"></div>
+
+    <div class="fillMeIn"></div>
+    <div class="fillMeIn"></div>
+    <div class="fillMeIn"></div>
+    <div class="fillMeIn"></div>
+    <div class="fillMeIn"></div>
 
 </body>
 </html>
